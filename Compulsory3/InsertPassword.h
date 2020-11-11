@@ -5,6 +5,8 @@
 #include <conio.h> // Needed for _getch
 #include <fstream> // Needed for the password file I/O
 
+#include "CreatePassword.h"
+
 std::vector <int> moveInsert(std::vector <int>& cursorPos);
 void endInsert();
 
@@ -17,13 +19,14 @@ void insert()
 
     std::vector <int> cursorPos{ 0,0 };
 
-
-    while (loop == true) {
+    std::string strPasswordfromboard;
+    strPasswordfromboard = move(cursorPos);
+    /*while (loop == true) {
 
         printTable(cursorPos);
         moveInsert(cursorPos);
 
-    }
+    }*/
 
 
 
