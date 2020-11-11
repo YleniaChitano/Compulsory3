@@ -7,27 +7,27 @@ void menu();
 
 int main()
 {
-    char account;
-    std::cout << "Welcome to Battleship!\n\n";
-    account:
-    std::cout << "Press 1 if you want to create a new account or 2 to log in to your previous account.\n";
-    std::cin >> account;
+	char account;
+	std::cout << "Welcome to Battleship!\n\n";
+account:
+	std::cout << "Press 1 if you want to create a new account or 2 to log in to your previous account.\n";
+	std::cin >> account;
 
-    if (account == '1')
-    {
-    create();
-	menu();
-    }
+	if (account == '1')
+	{
+		create();
+		menu();
+	}
 
-    else if (account == '2')
-    {
-        insert();
-    }
-    
-    else {
-        std::cout << "Invalid input\n";
-        goto account;
-    }
+	else if (account == '2')
+	{
+		insert();
+	}
+
+	else {
+		std::cout << "Invalid input\n";
+		goto account;
+	}
 }
 
 
@@ -59,12 +59,11 @@ choice:
 	}
 }
 
-std::vector <char> GeneratePasswordSequence()
+void GeneratePasswordSequence()
 {
 	std::fstream password("Password.txt", std::ios::out);
-	std::vector <char> table{ {'A','B','C','D'},{'E','F','G','H'}, {'I','J','K','L'}, {'M','N','O','P'} };
+	std::vector <char> table{ 'A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P' };
 	std::vector <char> sequence;
-	std::cout << table.at(password);
-	
+	//std::cout << table.at(password);
 
 }
